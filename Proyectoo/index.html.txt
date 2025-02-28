@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro de Incidentes de Seguridad</title>
+  <!-- Enlazamos el archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Incidentes de Seguridad</h1>
+  </header>
+
+  <div class="container">
+    <!-- Formulario para registrar un incidente -->
+    <form id="incidentForm">
+      <label for="incidentDate">Fecha:</label>
+      <input type="date" id="incidentDate" required>
+
+      <label for="incidentTime">Hora:</label>
+      <input type="time" id="incidentTime" required>
+
+      <label for="incidentLocation">Ubicación / Vuelo:</label>
+      <input 
+        type="text" 
+        id="incidentLocation" 
+        placeholder="Ej: Puerta 12, Sala de embarque, Vuelo 123" 
+        required 
+      >
+
+      <label for="incidentDescription">Descripción:</label>
+      <textarea 
+        id="incidentDescription" 
+        rows="3" 
+        placeholder="Describa brevemente el incidente" 
+        required
+      ></textarea>
+
+      <label for="incidentActions">Acciones tomadas:</label>
+      <textarea 
+        id="incidentActions" 
+        rows="3" 
+        placeholder="Qué acciones se tomaron" 
+        required
+      ></textarea>
+
+      <button type="submit">Registrar Incidente</button>
+    </form>
+
+    <!-- Tabla para mostrar los incidentes registrados -->
+    <table id="incidentsTable">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Ubicación / Vuelo</th>
+          <th>Descripción</th>
+          <th>Acciones Tomadas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas dinámicas generadas con JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Enlazamos nuestro archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
